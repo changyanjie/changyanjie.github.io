@@ -263,6 +263,113 @@
             
               
                 
+                <a class="post-title-link" href="/2016/07/15/nginx-install-on-centos/" itemprop="url">
+                  nginx_install_on_centos
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-15T00:12:57+08:00" content="2016-07-15">
+              2016-07-15
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="http://nginx.org/en/linux_packages.html" target="_blank" rel="external">官方手册</a>  </p>
+<p>安装默认版本 1.6.2</p>
+<blockquote>
+<p>$ yum info nginx<br>$ yum install nginx</p>
+</blockquote>
+<p>安装最新稳定版</p>
+<blockquote>
+<p>$ vi /etc/yum.repos.d/nginx.repo<br>[nginx]<br>  name=nginx repo<br>  baseurl=<a href="http://nginx.org/packages/centos/7/$basearch/" target="_blank" rel="external">http://nginx.org/packages/centos/7/$basearch/</a><br>  gpgcheck=0  </p>
+<h2 id="enabled-1"><a href="#enabled-1" class="headerlink" title="  enabled=1  "></a>  enabled=1  </h2><p>安装最新版<br>  $ yun info nginx  </p>
+<h2 id="yum-install-nginx"><a href="#yum-install-nginx" class="headerlink" title="  $ yum install nginx"></a>  $ yum install nginx</h2><p>未编译安装第三方模块, 查看已安装模块  </p>
+<h2 id="nginx-V"><a href="#nginx-V" class="headerlink" title="  $ nginx -V  "></a>  $ nginx -V  </h2><p>nginx version: nginx/1.10.1<br>built by gcc 4.8.3 20140911 (Red Hat 4.8.3-9) (GCC)<br>built with OpenSSL 1.0.1e-fips 11 Feb 2013<br>TLS SNI support enabled<br>configure arguments: –prefix=/etc/nginx –sbin-path=/usr/sbin/nginx –modules-path=/usr/lib64/nginx/modules …  </p>
+<h2 id="–add-module-root-tmp-fastdfs-install-fastdfs-nginx-module-src"><a href="#–add-module-root-tmp-fastdfs-install-fastdfs-nginx-module-src" class="headerlink" title="–add-module=/root/tmp/fastdfs_install/fastdfs-nginx-module/src "></a>–add-module=/root/tmp/fastdfs_install/fastdfs-nginx-module/src </h2><p>加入需要安装的模块，重新编译<br>  $ cd /usr/local/src/nginx-1.10.1<br>  $ ./configure –prefix=/etc/nginx –sbin-path=/usr/sbin/nginx –modules-path=/usr/lib64/nginx/modules …<br>–add-module=/usr/local/src/fastdfs-nginx-module/src  </p>
+<h2 id="make-注意不要执行make-install"><a href="#make-注意不要执行make-install" class="headerlink" title="  $ make  #注意不要执行make install "></a>  $ make  #注意不要执行make install </h2><p>替换nginx二进制文件<br>  $ cp /usr/sbin/nginx /usr/sbin/nginx.bak<br>  $ cp objs/nginx /usr/sbin/nginx</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/07/06/python-wiki/" itemprop="url">
                   python-wiki
                 </a>
@@ -475,7 +582,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -485,7 +592,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
