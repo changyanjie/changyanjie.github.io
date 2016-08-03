@@ -13,8 +13,11 @@
 </blockquote>
 <p>安装最新稳定版</p>
 <blockquote>
-<p>$ vi /etc/yum.repos.d/nginx.repo<br>[nginx]<br>  name=nginx repo<br>  baseurl=<a href="http://nginx.org/packages/centos/7/$basearch/" target="_blank" rel="external">http://nginx.org/packages/centos/7/$basearch/</a><br>  gpgcheck=0  </p>
-<h2 id="enabled-1"><a href="#enabled-1" class="headerlink" title="  enabled=1  "></a>  enabled=1  </h2><p>安装最新版<br>  $ yun info nginx  </p>
+<p>$ vi /etc/yum.repos.d/nginx.repo<br>[nginx]<br>  name=nginx repo<br>  baseurl=<a href="http://nginx.org/packages/centos/7/$basearch/" target="_blank" rel="external">http://nginx.org/packages/centos/7/$basearch/</a><br>  gpgcheck=0<br>  enabled=1  </p>
+</blockquote>
+<hr>
+<blockquote>
+<p>安装最新版<br>  $ yun info nginx  </p>
 <h2 id="yum-install-nginx"><a href="#yum-install-nginx" class="headerlink" title="  $ yum install nginx"></a>  $ yum install nginx</h2><p>未编译安装第三方模块, 查看已安装模块  </p>
 <h2 id="nginx-V"><a href="#nginx-V" class="headerlink" title="  $ nginx -V  "></a>  $ nginx -V  </h2><p>nginx version: nginx/1.10.1<br>built by gcc 4.8.3 20140911 (Red Hat 4.8.3-9) (GCC)<br>built with OpenSSL 1.0.1e-fips 11 Feb 2013<br>TLS SNI support enabled<br>configure arguments: –prefix=/etc/nginx –sbin-path=/usr/sbin/nginx –modules-path=/usr/lib64/nginx/modules …  </p>
 <h2 id="–add-module-root-tmp-fastdfs-install-fastdfs-nginx-module-src"><a href="#–add-module-root-tmp-fastdfs-install-fastdfs-nginx-module-src" class="headerlink" title="–add-module=/root/tmp/fastdfs_install/fastdfs-nginx-module/src "></a>–add-module=/root/tmp/fastdfs_install/fastdfs-nginx-module/src </h2><p>加入需要安装的模块，重新编译<br>  $ cd /usr/local/src/nginx-1.10.1<br>  $ ./configure –prefix=/etc/nginx –sbin-path=/usr/sbin/nginx –modules-path=/usr/lib64/nginx/modules …<br>–add-module=/usr/local/src/fastdfs-nginx-module/src  </p>
